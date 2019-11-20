@@ -1,20 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import Test from './components/test';
 
 import './index.scss';
 
 const App = () => {
-  console.log('alert');
-
-  const [test, setTest] = useState('false');
-
-  return (
-    <div onClick={() => setTest('true')}>
-      This is my App {test}
-      <Test />
-    </div>
-  );
+  return <div>React Boilerplate - You are good to start coding...</div>;
 };
 
 /* eslint-disable no-undef */
