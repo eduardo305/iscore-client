@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Test from './components/test';
 
+import './index.scss';
+
 const App = () => {
   console.log('alert');
 

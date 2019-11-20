@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanTerminalPlugin = require('clean-terminal-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -12,18 +13,26 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: '/node_modules/',
-        loaders: ['babel-loader'],
+        loaders: ['babel-loader', 'eslint-loader'],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        loaders: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
   devServer: {
     contentBase: './dist',
     hot: true,
+    stats: 'minimal',
   },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
+    }),
+    new CleanTerminalPlugin({
+      message: 'Terminal was cleaned up...',
     }),
   ],
 };
