@@ -1,30 +1,30 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 
-import Selector from "./components/Selector";
-import Caption from "./components/Caption";
-import Button from "./components/Button";
-import LeagueSelector from "./components/LeagueSelector";
-import LeagueStats from "./components/LeagueStats";
-import Header from "./components/Header";
-import ButtonGroup from "./components/ButtonGroup";
+import Selector from './components/Selector';
+import Caption from './components/Caption';
+import Button from './components/Button';
+import LeagueSelector from './components/LeagueSelector';
+import LeagueStats from './components/LeagueStats';
+import Header from './components/Header';
+import ButtonGroup from './components/ButtonGroup';
 
-import "./index.scss";
+import './index.scss';
 
 const options = [
   {
-    label: "brazil",
-    badge: "https://restcountries.eu/data/bra.svg"
+    label: 'brazil',
+    badge: 'https://restcountries.eu/data/bra.svg',
   },
   {
-    label: "Spain",
-    badge: "https://restcountries.eu/data/esp.svg"
+    label: 'Spain',
+    badge: 'https://restcountries.eu/data/esp.svg',
   },
-  { label: "usa", badge: "https://restcountries.eu/data/usa.svg" },
-  { label: "Italy", badge: "https://restcountries.eu/data/ita.svg" },
-  { label: "Germany", badge: "https://restcountries.eu/data/deu.svg" },
-  { label: "Mexico", badge: "https://restcountries.eu/data/mex.svg" },
-  { label: "Argentina", badge: "https://restcountries.eu/data/arg.svg" }
+  { label: 'usa', badge: 'https://restcountries.eu/data/usa.svg' },
+  { label: 'Italy', badge: 'https://restcountries.eu/data/ita.svg' },
+  { label: 'Germany', badge: 'https://restcountries.eu/data/deu.svg' },
+  { label: 'Mexico', badge: 'https://restcountries.eu/data/mex.svg' },
+  { label: 'Argentina', badge: 'https://restcountries.eu/data/arg.svg' },
 ];
 
 function App() {
@@ -83,7 +83,10 @@ function App() {
           <Header
             selectedCountry={selectedCountry}
             selectedLeague={selectedLeague}
-            changeCountry={() => setStep(0)}
+            changeCountry={() => {
+              setSelectedCountry(options[0]);
+              setStep(0);
+            }}
             changeLeague={() => setStep(1)}
           />
           <LeagueStats favorite="liverpool" league={selectedLeague.idLeague} />
@@ -99,5 +102,5 @@ if (module.hot) {
 }
 /* eslint-enable no-undef */
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 ReactDOM.render(<App />, rootElement);
