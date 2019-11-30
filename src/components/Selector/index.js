@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import withLoading from "../../hocs/withLoading";
+import withLoading from '../../hocs/withLoading';
 
-import "./Selector.scss";
+import './Selector.scss';
 
-const Selector = ({ options, onChange, onClick = () => {} }) => {
+const Selector = ({ options = [], onChange, onClick = () => {} }) => {
   const listRef = useRef();
 
   const renderOptions = () => {
@@ -40,7 +40,7 @@ const Selector = ({ options, onChange, onClick = () => {} }) => {
 Selector.propTypes = {
   options: PropTypes.array,
   onChange: PropTypes.func,
-  onClick: PropTypes.func
-}
+  onClick: PropTypes.func,
+};
 
-export default withLoading("options")(Selector);
+export default withLoading('options')(Selector);

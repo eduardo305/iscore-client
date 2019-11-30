@@ -1,9 +1,9 @@
-import React from "react";
-import SoccerLoader from "../components/SoccerLoader";
+import React from 'react';
+import SoccerLoader from '../components/SoccerLoader';
 
 const WithLoading = prop => Component => {
   return function WithLoadingComponent({ ...props }) {
-    if (!props[prop].length) {
+    if (props[prop] && !props[prop].length) {
       return <SoccerLoader />;
     }
 

@@ -39,7 +39,7 @@ const getLeaguesByCountry = async country => {
           idLeague,
           badge: strBadge,
           label: strLeague,
-          country: strCountry
+          country: strCountry,
         };
       });
     })

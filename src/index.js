@@ -8,6 +8,7 @@ import LeagueSelector from './components/LeagueSelector';
 import LeagueStats from './components/LeagueStats';
 import Header from './components/Header';
 import ButtonGroup from './components/ButtonGroup';
+import { AppProvider } from './providers/AppProvider';
 
 import './index.scss';
 
@@ -103,4 +104,9 @@ if (module.hot) {
 /* eslint-enable no-undef */
 
 const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+  <AppProvider>
+    <App />
+  </AppProvider>,
+  rootElement
+);
