@@ -30,7 +30,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'index.html',
+      template: './index.html',
+      favicon: './favicon.png',
     }),
     new CleanTerminalPlugin({
       message: 'Terminal was cleaned up...',
