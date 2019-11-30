@@ -1,0 +1,20 @@
+.stat {
+  &:hover {
+    background-color: #F1F3F4;
+  }
+  td {
+    border-bottom: 1px solid #F1F3F4;
+    padding: 20px;
+
+    &.left {
+      text-align: left;
+    }
+  }
+
+  &--favorite {
+    td {
+      background-color: #f08080;
+      color: #fff;
+    }
+  }
+}

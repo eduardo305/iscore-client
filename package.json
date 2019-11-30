@@ -10,13 +10,16 @@
     "lint": "./node_modules/.bin/esw src/**/*.js -w"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
+    "@babel/plugin-transform-runtime": "^7.7.4",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
+    "@babel/runtime": "^7.7.4",
     "babel-loader": "^8.0.6",
     "clean-terminal-webpack-plugin": "^2.0.5",
     "css-loader": "^3.2.0",

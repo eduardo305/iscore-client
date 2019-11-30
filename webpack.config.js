@@ -26,6 +26,7 @@ module.exports = {
     hot: true,
     stats: 'minimal',
   },
+  devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',

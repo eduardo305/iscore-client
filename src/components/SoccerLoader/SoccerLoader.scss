@@ -1,0 +1,14 @@
+.soccer-loader {
+  animation: spin 1s linear infinite;
+
+  img {
+    width: 150px;
+    filter: invert(100%);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
